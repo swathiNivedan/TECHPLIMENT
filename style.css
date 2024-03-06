@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c786a1; /* Light background color */
+    transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Common styles for calculator, history container, and dark mode toggle */
+.calculator,
+.history-container,
+.dark-mode-toggle {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #8a9ba1; /* White background color */
+    box-shadow: 0 0 20px rgba(116, 63, 63, 0.1);
+}
+
+.calculator label {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.display input {
+    width: 90%;
+    padding: 9px;
+    font-size: 20px;
+    border: 1px solid #a49ec7;
+    border-radius: 5px;
+}
+
+/* Button row styles */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Calculator button styles */
+input[type="button"] {
+    border: none;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #461c7e; /* Blue color for buttons */
+    margin: 2px;
+    border-radius: 10px;
+    color: rgb(180, 204, 142);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease
+}
+
+input[type="button"]:hover {
+    background-color: #255d81; /* Darker blue color on hover */
+}
+
+.history-button {
+    display: block; /* Set display to block for proper alignment */
+    margin-top: 10px; /* Add some top margin for spacing */
+    background-color: #e74c3c; /* Red color for history clear button */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-button:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle label {
+    margin-left: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+.container.dark-mode {
+    background-color: #444; /* Dark background color */
+}
+
+.calculator.dark-mode,
+.history-container.dark-mode,
+.dark-mode-toggle.dark-mode {
+    background-color: #555; /* Dark background color */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode button styles */
+.dark-mode-toggle label::before {
+    content: '\2600'; /* Unicode sun character */
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.dark-mode-toggle input:checked + label::before {
+    content: '\1F319'; /* Unicode crescent moon character */
+}

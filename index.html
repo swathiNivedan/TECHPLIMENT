@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <label for="display">CALCULATOR</label>
+                <div class="display">
+                    
+                    <input type="text" id="display" readonly />
+                </div>
+                <div id="buttons-container"></div>
+            </form>
+        </div>
+
+        <div>
+            <h2>Calculation History</h2>
+            <button id="historyButton" class="history-button">History Clear</button>
+            <ul id="history-list" aria-live="polite" aria-atomic="true"></ul>
+        </div>
+
+        <div class="auth-container">
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button type="button" id="loginButton">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script src="app.js" defer></script>
+    <script src="history.js" defer></script>
+    <script src="auth.js" defer></script>
+</body>
+</html>
